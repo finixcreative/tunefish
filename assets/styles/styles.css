@@ -1,0 +1,168 @@
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,400,300,700);
+* {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	box-sizing: border-box;
+}
+body {
+	background: #2ae;
+	background-image: url("../images/wave_bg.jpg");
+	background-size: cover;
+	background-attachment: fixed;
+	background-position: center;
+	color: #fff;
+	margin: 0px;
+}
+body, button {
+	font-family: 'Open Sans', 'Helvetica', 'Arial', sans-serif;
+}
+
+/* SIZES */
+h1, h2, h3, h4, h5, h6, p {
+	font-weight: 300;
+	line-height: 1.5em;
+}
+h1, h2, h3, h4, h5, h6 {
+	margin: 0;
+	line-height: 2em;
+	text-transform: uppercase;
+}
+h1 {
+	font-size: 2.4em;
+}
+h2 {
+	font-size: 2.0em;
+}
+h3 {
+	font-size: 1.6em;
+}
+h4 {
+	font-size: 1.2em;
+}
+h5 {
+	font-size: 1.0em;
+}
+h6 {
+	font-size: 0.6em;
+}
+p {
+	margin: 1em 0;
+	font-size: 20px;
+}
+
+#content {
+	background: rgba(34,170,238,0.5);
+	width: 100%;
+	padding: 100px;
+	text-align: center;
+	float: left;
+}
+#search-results {
+	background: rgba(119,119,119,1);
+	width: 100%;
+	padding: 100px;
+	text-align: center;
+	float: left;
+}
+img#logo {
+	width: 150px;
+	height: auto;
+}
+
+form {
+	width: 100%;
+	max-width: 500px;
+	margin: 20px auto 0;
+}
+input,
+select,
+button {
+	height: 40px;
+	padding: 10px;
+	border: none;
+	float: left;
+}
+input:focus,
+select:focus,
+button:focus {
+	outline: none;
+}
+input[type=search] {
+	background: #fff;
+	width: 50%;
+	float: left;
+}
+select {
+	background: url("../images/filter.png") no-repeat #777;
+	background-size: 20px;
+	background-position: 10px 10px;
+	color: #fff;
+	width: 25%;
+	padding-left: 40px;
+	border-radius: 5px 0 0 5px;
+	font-weight: 700;
+	text-transform: uppercase;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+	float: left;
+}
+select:hover {
+	background-color: #888;
+}
+button,
+input[type=submit] {
+	background: url("../images/search.png") no-repeat #ea3;
+	background-size: 20px;
+	background-position: 10px 10px;
+	color: #fff;
+	width: 25%;
+	padding-left: 40px;
+	border-radius: 0 5px 5px 0;
+	font-weight: 700;
+	text-align: left;
+	text-transform: uppercase;
+	overflow: hidden;
+}
+button:hover,
+input[type=submit]:hover {
+	background-color: #fb4;
+}
+
+@media screen and (max-width: 600px) {
+	body {
+		background-image: url("../images/wave_bg-mobile.jpg");
+	}
+	#content {
+		padding: 60px 40px;
+	}
+	select,
+	input[type=search] {
+		margin-bottom: 10px;
+	}
+	input[type=search] {
+		width: 75%;
+		border-radius: 0 5px 5px 0;
+	}
+	button,
+	input[type=submit] {
+		width: 50%;
+		border-radius: 5px;
+		float: none;
+	}
+}
+
+@media screen and (max-width: 450px) {
+	#content {
+		padding: 40px 20px;
+	}
+	select,
+	input[type=search],
+	input[type=submit],
+	button {
+		width: 100%;
+		border-radius: 5px;
+		float: left;
+	}
+}

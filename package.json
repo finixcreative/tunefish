@@ -1,0 +1,18 @@
+{
+  "name": "tune_fish",
+  "version": "1.0.0",
+  "description": "Spotify seach app",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Richard Smith",
+  "license": "ISC",
+  "dependencies": {
+    "babel": "^6.5.2",
+    "express": "^4.14.0",
+    "jquery": "^3.1.0",
+    "jsdom": "^3.1.2",
+    "request": "^2.74.0"
+  }
+}
