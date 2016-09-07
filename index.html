@@ -6,7 +6,7 @@
 		<link rel="stylesheet" type="text/css" href="assets/styles/styles.css">
 	</head>
 	<body>
-		<div id="content">
+		<div id="content" class="center">
 			<a href="/">
 				<img id="logo" src="assets/images/logo-tune_fish.png">				
 			</a>
@@ -17,21 +17,16 @@
 					<option value="track">Songs</option>
 					<option value="album">Albums</option>
 				</select>
-				<input id="query" type="search" name="q" placeholder="Spotify lookup" required>
+				<input id="query" type="search" name="q" placeholder="Keywords" required>
 				<input type="submit" id="search" class="submit-button" value="Search">
 			</form>
 		</div>
 		<div id="search-results">
-			<p>Search above ^</p>
+			<div class="spacer">
+				<p class="center">Search Spotify for artists, songs, &amp; albums ^</p>
+			</div>
 			<!-- Search Results -->
 		</div>
 		<script src="assets/scripts/search.js"></script>
-		<script type="text/javascript">
-			$("#search-form").on("submit", function(event){
-				event.preventDefault();
-				alert("Searching...");
-				search($("#filter").val(), $("#query").val());
-			});
-		</script>
 	</body>
 </html>

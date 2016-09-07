@@ -50,26 +50,56 @@ p {
 	margin: 1em 0;
 	font-size: 20px;
 }
-
+.full {
+	width: 100%;
+	float: left;
+}
+.center {
+	text-align: center;
+}
+.spacer {
+	padding: 100px 0;
+}
 #content {
 	background: rgba(34,170,238,0.5);
 	width: 100%;
 	padding: 100px;
-	text-align: center;
 	float: left;
 }
 #search-results {
 	background: rgba(119,119,119,1);
 	width: 100%;
-	padding: 100px;
-	text-align: center;
 	float: left;
+}
+a.card {
+	background-image: url('/assets/images/image_missing.png');
+	background-size: cover;
+	background-position: center;
+	color: #fff;
+	width: 20%;
+	height: 0;
+	padding: 10px;
+	padding-bottom: calc(20% + 10px);
+	text-shadow: 0px 0px 2px rgba(0,0,0,0.9);
+	text-decoration: none;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	overflow: hidden;
+	float: left;
+}
+a.card:hover {
+	background-color: rgba(0,0,0,0.2);
+	color: #fb4;
+}
+img.thumbnail {
+	width: 100%;
+	height: auto;
+	display: block;
 }
 img#logo {
 	width: 150px;
 	height: auto;
 }
-
 form {
 	width: 100%;
 	max-width: 500px;
@@ -130,12 +160,22 @@ input[type=submit]:hover {
 	background-color: #fb4;
 }
 
+/* Responsive styles*/
+
+@media screen and (max-width: 900px) {
+	a.card {
+		width: 25%;
+	}
+}
 @media screen and (max-width: 600px) {
 	body {
 		background-image: url("../images/wave_bg-mobile.jpg");
 	}
 	#content {
 		padding: 60px 40px;
+	}
+	a.card {
+		width: 50%;
 	}
 	select,
 	input[type=search] {
@@ -152,10 +192,12 @@ input[type=submit]:hover {
 		float: none;
 	}
 }
-
 @media screen and (max-width: 450px) {
 	#content {
 		padding: 40px 20px;
+	}
+	a.card {
+		width: 100%;
 	}
 	select,
 	input[type=search],
