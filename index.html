@@ -2,14 +2,13 @@
 <html>
 	<head>
 		<title>TuneFish | Spotify search app</title>
-		<!--<script src="/node_modules/jquery/dist/jquery.min.js"></script>-->
-		<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
-		<link rel="stylesheet" type="text/css" href="/assets/styles/styles.css">
+		<script src="node_modules/jquery/dist/jquery.min.js"></script>
+		<link rel="stylesheet" type="text/css" href="assets/styles/styles.css">
 	</head>
 	<body>
-		<div id="content">
+		<div id="content" class="center">
 			<a href="/">
-				<img id="logo" src="/assets/images/logo-tune_fish.png">				
+				<img id="logo" src="assets/images/logo-tune_fish.png">				
 			</a>
 			<h1>TuneFish</h1>
 			<form id="search-form">
@@ -18,21 +17,16 @@
 					<option value="track">Songs</option>
 					<option value="album">Albums</option>
 				</select>
-				<input id="query" type="search" name="q" placeholder="Spotify lookup" required>
+				<input id="query" type="search" name="q" placeholder="Keywords" required>
 				<input type="submit" id="search" class="submit-button" value="Search">
 			</form>
 		</div>
 		<div id="search-results">
-			<p>Search above ^</p>
+			<div class="spacer">
+				<p class="center">Search Spotify for artists, songs, &amp; albums ^</p>
+			</div>
 			<!-- Search Results -->
 		</div>
-		<script src="/assets/scripts/search.js"></script>
-		<script type="text/javascript">
-			$("#search-form").on("submit", function(event){
-				event.preventDefault();
-				alert("Searching...");
-				search($("#filter").val(), $("#query").val());
-			});
-		</script>
+		<script src="assets/scripts/search.js"></script>
 	</body>
 </html>
